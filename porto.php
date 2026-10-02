@@ -76,17 +76,13 @@ $tujuan = [
         @keyframes lev { 50% { translate: 0 -14px; } }
         .top { display: flex; gap: 16px; align-items: center; margin-bottom: 22px; }
         .top h3 { font-family: 'Unbounded', sans-serif; font-size: .8rem; color: var(--a); font-weight: 500; }
-        .top small { color: var(--mute); font-size: .8rem; }
         .card dl { display: grid; gap: 14px; }
         .card dt { color: var(--mute); font-size: .8rem; }
         .card dd { font-size: 1.05rem; font-weight: 600; }
         .nim { font-family: 'Unbounded', sans-serif; font-size: 1.3rem; letter-spacing: .08em; color: var(--c); }
-        .slot { position: relative; overflow: hidden; background: #0d1230; border: 1.5px dashed var(--line); border-radius: 18px; cursor: pointer; display: grid; place-items: center; color: var(--mute); font-size: .85rem; transition: border-color .2s; }
+        .slot { position: relative; overflow: hidden; background: #0d1230; border: 1px solid var(--line); border-radius: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color .2s; }
         .slot:hover, .slot:focus-visible { border-color: var(--c); outline: none; }
-        .slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-        .chg, .del { position: absolute; z-index: 2; background: #0a0e1fd9; color: var(--ink); cursor: pointer; font-size: .74rem; }
-        .chg { left: 8px; bottom: 8px; padding: 4px 12px; border-radius: 99px; }
-        .del { right: 8px; top: 8px; width: 28px; height: 28px; border-radius: 50%; border: 0; font-size: 1rem; }
+        .slot img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .av { width: 92px; height: 92px; flex: none; border-radius: 24px; }
         section { max-width: 1120px; margin: 0 auto; padding: 70px 24px; }
         h2 { font-family: 'Unbounded', sans-serif; font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 600; letter-spacing: -.02em; margin-bottom: 12px; }
@@ -207,7 +203,7 @@ $tujuan = [
                     <?php endif; ?>
 
                     <?php if(!empty($sosmed['linkedin'])): ?>
-                        <a href="<?= $sosmed['linkedin'] ?>" target="_blank" rel="noopener noreferrer">linkedin</a>
+                        <a href="<?= $sosmed['linkedin'] ?>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <?php endif; ?>
                 </div>
             </div>
@@ -215,10 +211,11 @@ $tujuan = [
             <div class="id">
                 <div class="card">
                     <div class="top">
-                        <div class="slot av" data-key="profil" data-src="foto/profil2.jpeg" aria-label="Foto profil"></div>
+                        <div class="slot av" aria-label="Foto profil">
+                            <img src="foto/profil2.jpeg" alt="Foto Profil <?= $profil['nama'] ?>">
+                        </div>
                         <div>
                             <h3>KARTU PROFIL</h3>
-                            <small>Ketuk foto untuk mengganti</small>
                         </div>
                     </div>
                     <dl>
@@ -251,7 +248,7 @@ $tujuan = [
             
             <div class="rob">
                 <i aria-hidden="true">
-                 <img src="foto/logo.jpg" alt="Logo" style="width: 50px; height: 50px; object-fit: contain;">
+                    <img src="foto/logo.jpg" alt="Logo Suvifor" style="width: 50px; height: 50px; object-fit: contain;">
                 </i>
                 <div>
                     <b>Tim Riset SUVIFOR (Robotika)</b><br>
@@ -260,19 +257,19 @@ $tujuan = [
             </div>
             
             <div class="gal">
-                <div class="slot" data-key="riset1" data-src="foto/Robotik1.jpeg" aria-label="Foto tim riset 1"></div>
-                <div class="slot" data-key="riset2" data-src="foto/Robotik2.jpeg" aria-label="Foto tim riset 2"></div>
-                <div class="slot" data-key="riset3" data-src="foto/Robotik3.jpeg" aria-label="Foto tim riset 3"></div>
-                <div class="slot" data-key="riset4" data-src="foto/Robotik4.jpeg" aria-label="Foto tim riset 4"></div>
-                <div class="slot" data-key="riset5" data-src="foto/Robotik5.jpeg" aria-label="Foto tim riset 5"></div>
-                <div class="slot" data-key="riset6" data-src="foto/Robotik66.jpeg" aria-label="Foto tim riset 6"></div>
+                <div class="slot"><img src="foto/Robotik1.jpeg" alt="Foto Tim Riset 1"></div>
+                <div class="slot"><img src="foto/Robotik2.jpeg" alt="Foto Tim Riset 2"></div>
+                <div class="slot"><img src="foto/Robotik3.jpeg" alt="Foto Tim Riset 3"></div>
+                <div class="slot"><img src="foto/Robotik4.jpeg" alt="Foto Tim Riset 4"></div>
+                <div class="slot"><img src="foto/Robotik5.jpeg" alt="Foto Tim Riset 5"></div>
+                <div class="slot"><img src="foto/Robotik66.jpeg" alt="Foto Tim Riset 6"></div>
             </div>
-            <p class="hint">Suvifor UNNES adalah tim riset dan unit robotika mahasiswa dari Universitas Negeri Semarang yang berfokus pada pengembangan dan kompetisi robot terbang .</p>
+            <p class="hint">Ketuk foto untuk memperbesar. Suvifor UNNES adalah tim riset dan unit robotika mahasiswa dari Universitas Negeri Semarang yang berfokus pada pengembangan dan kompetisi robot terbang.</p>
         </section>
 
         <section id="tujuan">
             <h2>Cita-cita & Fokus Keahlian</h2>
-            <p class="lead">Menjawab kebutuhan industri teknologi modern, saya memfokuskan diri pada tigs pilar utama: IoT Keamanan dan Efisiensi Infrastruktur.</p>
+            <p class="lead">Menjawab kebutuhan industri teknologi modern, saya memfokuskan diri pada tiga pilar utama: IoT, Keamanan, dan Efisiensi Infrastruktur.</p>
             
             <div class="two">
                 <?php foreach ($tujuan as$item): ?>
@@ -375,39 +372,16 @@ $tujuan = [
         const openLb = s => { lb.querySelector('img').src = s; lb.hidden = false };
         lb.onclick = () => lb.hidden = true;
         addEventListener('keydown', e => { if (e.key === 'Escape') lb.hidden = true });
-        
-        const fit = f => new Promise(r => {
-            const i = new Image(), u = URL.createObjectURL(f);
-            i.onload = () => {
-                const s = Math.min(1, 900 / Math.max(i.width, i.height));
-                const c = document.createElement('canvas');
-                c.width = i.width * s; c.height = i.height * s;
-                c.getContext('2d').drawImage(i, 0, 0, c.width, c.height);
-                URL.revokeObjectURL(u); r(c.toDataURL('image/jpeg', .8));
-            };
-            i.src = u;
-        });
 
-        document.querySelectorAll('.slot').forEach(s => {
-            s.tabIndex = 0; s.setAttribute('role', 'button');
-            s.innerHTML = '<img alt="" hidden><span class="ph">+ Foto</span><label class="chg" hidden>Ganti<input type="file" accept="image/*" hidden></label><button class="del" hidden aria-label="Hapus foto">&times;</button>';
-            
-            const img = s.querySelector('img'), ph = s.querySelector('.ph'), chg = s.querySelector('.chg'), del = s.querySelector('.del'), inp = s.querySelector('input'), k = 'foto:' + s.dataset.key;
-            
-            const show = (src, own) => {
-                if (src) { img.src = src; img.hidden = false; ph.hidden = true; chg.hidden = false; del.hidden = !own; } 
-                else { img.hidden = true; img.removeAttribute('src'); ph.hidden = false; chg.hidden = true; del.hidden = true; }
-            };
-            
-            const base = () => { const d = s.dataset.src; if (!d) return show(''); const t = new Image(); t.onload = () => show(d, false); t.onerror = () => show(''); t.src = d; };
-            
-            let sv = null; try { sv = localStorage.getItem(k); } catch (_) {}
-            sv ? show(sv, true) : base();
-            
-            inp.onchange = async () => { const f = inp.files[0]; inp.value = ''; if (!f) return; const u = await fit(f); show(u, true); try { localStorage.setItem(k, u); } catch (_) { alert('Foto tidak bisa disimpan di browser.'); } };
-            del.onclick = () => { try { localStorage.removeItem(k); } catch (_) {} base(); };
-            s.onclick = e => { if (e.target.closest('.chg,.del')) return; img.hidden ? inp.click() : openLb(img.src); };
-            s.onkeydown = e => { if (e.key === 'Enter' && e.target === s) s.click(); };
+        // Fungsi klik foto untuk memperbesar gambar (Lightbox)
+        document.querySelectorAll('.slot img').forEach(img => {
+            const parent = img.closest('.slot');
+            if (parent) {
+                parent.tabIndex = 0;
+                parent.setAttribute('role', 'button');
+                parent.onclick = () => openLb(img.src);
+                parent.onkeydown = e => { if (e.key === 'Enter') openLb(img.src); };
+            }
         });
 
         document.getElementById('replay').onclick = () => { try { sessionStorage.removeItem('intro'); } catch (_) {} location.reload(); };
