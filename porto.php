@@ -264,7 +264,7 @@ $tujuan = [
                 <div class="slot"><img src="foto/Robotik5.jpeg" alt="Foto Tim Riset 5"></div>
                 <div class="slot"><img src="foto/Robotik66.jpeg" alt="Foto Tim Riset 6"></div>
             </div>
-            <p class="hint">Ketuk foto untuk memperbesar. Suvifor UNNES adalah tim riset dan unit robotika mahasiswa dari Universitas Negeri Semarang yang berfokus pada pengembangan dan kompetisi robot terbang.</p>
+            <p class="hint">Suvifor UNNES adalah tim riset dan unit robotika mahasiswa dari Universitas Negeri Semarang yang berfokus pada pengembangan dan kompetisi robot terbang.</p>
         </section>
 
         <section id="tujuan">
