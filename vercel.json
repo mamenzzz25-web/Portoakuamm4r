@@ -7,6 +7,10 @@
   ],
   "routes": [
     {
+      "src": "/foto/(.*)",
+      "dest": "/foto/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/porto.php"
     }
