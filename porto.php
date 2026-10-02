@@ -212,7 +212,7 @@ $tujuan = [
                 <div class="card">
                     <div class="top">
                         <div class="slot av" aria-label="Foto profil">
-                            <img src="foto/profil2.jpeg" alt="Foto Profil <?= $profil['nama'] ?>">
+                            <img src="foto/Profil2.jpeg" alt="Foto Profil <?= $profil['nama'] ?>">
                         </div>
                         <div>
                             <h3>KARTU PROFIL</h3>
