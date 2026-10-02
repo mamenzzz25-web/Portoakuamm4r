@@ -4,14 +4,19 @@
     {
       "src": "porto.php",
       "use": "vercel-php"
+    },
+    {
+      "src": "foto/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/foto/(.*)",
+      "dest": "/foto/$1"
     },
     {
-      "src": "/(.*)",
+      "src": "/((?!foto/).*)",
       "dest": "/porto.php"
     }
   ]
