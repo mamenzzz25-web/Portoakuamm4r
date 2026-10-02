@@ -1,0 +1,8 @@
+# Cache & File Sistem
+.DS_Store
+Thumbs.db
+
+# Config Editor
+.vscode/
+.idea/
+*.log
